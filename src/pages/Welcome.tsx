@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SafeAreaView, Text, Image, TouchableOpacity, StyleSheet, Dimensions, View } from 'react-native';
 import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/core';
 
-import wateringImg from '../assets/watering.png'
+import wateringImg from '../assets/watering.png';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-
-
 
 export function Welcome() {
     const navigation = useNavigation();
@@ -29,7 +27,6 @@ export function Welcome() {
                     source={wateringImg}
                     style={styles.image}
                     resizeMode="contain"
-
                 />
 
                 <Text style={styles.subtitle}>
@@ -43,15 +40,15 @@ export function Welcome() {
                     activeOpacity={0.6}
                     onPress={handleStart}
                 >
+                    <Text>
 
-                    <Feather
-                        name='chevron-right'
-                        style={styles.buttonIcon}
-                    />
-
+                        <Feather
+                            name='chevron-right'
+                            style={styles.buttonIcon}
+                        />
+                    </Text>
                 </TouchableOpacity>
             </View>
-
         </SafeAreaView>
     )
 }
@@ -98,4 +95,4 @@ const styles = StyleSheet.create({
         fontSize: 32
 
     }
-})
+});
